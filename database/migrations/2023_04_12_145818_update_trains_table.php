@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::table('trains', function (Blueprint $table) {
-            //
+            $table->float('price', 10, 2)->after('carriages_num');
         });
     }
 
@@ -26,7 +26,7 @@ return new class extends Migration
     public function down()
     {
         Schema::table('trains', function (Blueprint $table) {
-            //
+            $table->dropColumn('price');
         });
     }
 };
