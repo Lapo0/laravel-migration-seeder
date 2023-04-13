@@ -19,7 +19,7 @@ class PageController extends Controller
 {
     public function homepage() {
 
-        $trains = Train::where('date', '>=', now())->get();
+        $trains = Train::all();
 
         dd($trains);
 
